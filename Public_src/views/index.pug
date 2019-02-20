@@ -13,7 +13,7 @@ block content
               span.mb-5.conference-description=description
               span.conference-date=date
 
-  section.mb-5
+  section.mb-5#summary
     div.container
       h3.text.mt-5.mb-5 What to Expect
       div.row.mb-3
@@ -22,10 +22,57 @@ block content
             h3.mb-3=expectation.title
             p=expectation.description
 
-  section.mb-5
+  hr
+
+  section.mb-5#speakers
     div.container
       h3.text.mt-5.mb-4 Now Calling for Speakers
       div.row.mb-3
           div.col-lg-12.mb-2
             p We are now seeking speakers for the conference. All talks will be recorded and distributed online.
             p Send us your talk proposals here
+
+  hr
+
+  section.mb-5#schedule
+    div.container
+      h3.text.mt-5.mb-4 Schedule
+      table.schedule
+        tr.headings
+          th Time
+          th Event
+        tr
+          td.time 9:00 - 10:00
+          td Open doors &amp; Breakfast
+        tr
+          td.time 10:00 - 12:00
+          td Morning Talks
+        tr
+          td.time 12:00 - 1:00
+          td Lunch &amp; Networking
+        tr
+          td.time 1:00 - 4:30
+          td Afternoon Talks
+        tr
+          td.time 4:30 - 5:00
+          td Closing Remarks, Snacks &amp; Networking
+        tr
+          td.time 5:00 - 9:00
+          td Pub Night w/ Swift Trivia
+
+  hr
+
+  section.mb-5#sponsors
+    div.container
+      h3.text.mt-5.mb-4 Sponsors
+      div.col-lg-12.mb-2
+        h4 &lt;Your brand here&gt;
+        p We are currently seeking sponsors. Sponsors help make SwiftTO an affordable conference available to everyone.
+        p As a sponsor your brand will:
+        ul
+          li Be displayed on our website and all marketing communications, including at the beginning and end of all recorded talks. 
+          li Have the opportunity to distribute branded swag at the event
+          li 
+            strong Gold Sponsors
+            |  will have the opportunity to make short remarks during the conference
+        p Other details can be discussed via email.

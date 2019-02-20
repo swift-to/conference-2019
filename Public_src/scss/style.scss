@@ -1066,3 +1066,15 @@ input.dependency {
 		margin: 0 auto;
 	}
 }
+
+table.schedule {
+	border-spacing: 10px;
+	border-collapse: separate;
+	font-size: 1.2rem;
+}
+tr.headings {
+	display: none;
+}
+td.time {
+	text-align: right;
+}
