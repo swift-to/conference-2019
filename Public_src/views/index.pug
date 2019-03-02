@@ -2,16 +2,19 @@ extends ./layout.pug
 
 block content
   section.site-hero.overlay
-    div.container
-      div.row.align-items-center.site-hero-inner.justify-content-center
-        div.col-md-8.text-center
-          div.mb-1.mb-md-5
-            h1.mb-2
-              img.swift-logo(src="./images/swift-icon-white.png")
-              span=title
-            div.info
-              span.mb-5.conference-description=description
-              span.conference-date=date
+    div.background-color-overlay
+      div.container
+        div.row.align-items-center.site-hero-inner.justify-content-center
+          div.col-md-8.text-center
+            div.mb-1.mb-md-5
+              h1.mb-3
+                img.swift-logo(src="./images/swift-icon-white.png")
+                span=title
+              div.info
+                span.mb-5.conference-description=description
+                span.mb-5.conference-date=date
+                span Sign-up to be notified as soon as tickets are on sale
+                include mailchimpForm.pug
 
   section.mb-5#summary
     div.container
@@ -21,7 +24,6 @@ block content
           div.col-lg-4.mb-2
             h3.mb-3=expectation.title
             p=expectation.description
-
   hr
 
   section.mb-5#speakers
@@ -30,7 +32,10 @@ block content
       div.row.mb-3
           div.col-lg-12.mb-2
             p We are now seeking speakers for the conference. All talks will be recorded and distributed online.
-            p Send us your talk proposals here
+            p Talks can be 5, 10, 15 or 30 minutes in length. Depending on the proposals received we will organize the schedule accordingly.
+            p Speakers will be announced over time to allow for later submissions and help us to ensure a packed schedule of great content.
+            p 
+              a(href=rfpUrl, target="_blank") Send us your talk proposals here
 
   hr
 
@@ -51,14 +56,14 @@ block content
           td.time 12:00 - 1:00
           td Lunch &amp; Networking
         tr
-          td.time 1:00 - 4:30
+          td.time 1:00 - 4:45
           td Afternoon Talks
         tr
-          td.time 4:30 - 5:00
-          td Closing Remarks, Snacks &amp; Networking
+          td.time 4:45 - 5:00
+          td Closing Remarks
         tr
           td.time 5:00 - 9:00
-          td Pub Night w/ Swift Trivia
+          td Post-conference celebration and networking event
 
   hr
 

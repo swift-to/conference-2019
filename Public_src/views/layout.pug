@@ -1,19 +1,20 @@
 - var title = "Swift TO";
 - var description = "A conference celebrating Swift in Downtown Toronto";
 - var date = "Summer 2019"
+- var rfpUrl = "https://www.papercall.io/swift-to" 
 
 - var keywords = ["conference", "swift", "ios", "macos", "watchos", "linux", "server-side", "apple"].join(",")
 - var expectation1 = {title: "Great Talks", description: "A day filled with talks about all things Swift programming. Beyond just iOS and Mac development, this conference is about celebrating the language and its many uses."};
-- var expectation2 = {title: "Networking", description: "Meet other passionate Swift & iOS Developers in your community. An after-conference event will be organized at a nearby restaurant."};
+- var expectation2 = {title: "Networking", description: "Meet other passionate developers progamming with Swift in your community. An after-conference event will be organized at a nearby restaurant."};
 - var expectation3 = {title: "Knowledge you can share", description: "All content at Swift TO will be recorded and distributed online so anything you learn can easily be shared with your broader team after the event."};
-- var expectation4 = {title: "Quality", description: "We're here to celebrate the great passion and talent for Swift development in this city. SwiftTO wants to showcase the great work and ideas of our community."};
-- var expectation5 = {title: "Convenience", description: "Travelling for iOS/Swift conferences may not fit all schedules. SwiftTO is a jam-packed day of content close to home."};
-- var expectation6 = {title: "Affordability", description: "Travelling may not fit all budgets either. SwiftTO is a price conscious conference and welcome to all experience levels."};
+- var expectation4 = {title: "Quality", description: "We're here to celebrate the great passion and talent for Swift development in this city. SwiftTO wants to showcase great work and ideas from in and around our community."};
+- var expectation5 = {title: "Convenience", description: "Travelling for Swift/Apple conferences may not fit all schedules. SwiftTO is a jam-packed day of content close to home."};
+- var expectation6 = {title: "Affordability", description: "Conference ticket prices don't always fit our budgets. SwiftTO is a price conscious conference and welcome to all experience levels."};
 - var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5, expectation6];
 
 - var twitter = "nscoderto"
 - var email = "hello@swiftconf.to"
-- var companyName = "NSCoderTO Inc."
+- var companyName = "NSCoderTO in partnership with Pyrus.io Inc."
 
 doctype html
 html(lang="en")
@@ -47,6 +48,10 @@ html(lang="en")
           div(v-bind:class="{ collapse: !isExpanded }").navbar-collapse.navbar-light
             ul.navbar-nav.ml-auto.pl-lg-5.pl-0
               li.nav-item
+                a.nav-link(href='#speakers') Speakers 
+              li.nav-item
+                a.nav-link(href='#schedule') Schedule 
+              //- li.nav-item
                 a.nav-link(href='/') Tickets
 
     div#app
@@ -59,20 +64,13 @@ html(lang="en")
             h3.mb-4 About
             p.mb-4
               | #{description}
-            p.mb-4
-              | This template was derived from 
-              br
-              a(target='_blank', href='https://colorlib.com/wp/template/listed/')
-                strong Listed
-              | ; made with 
-              i.fa.fa-heart-o(aria-hidden='true')
-              |  by 
-              a(target='_blank', href='https://colorlib.com') Colorlib
           .col-md-4
             h3.mb-4 Links
             ul.list-unstyled
-              li
+              //- li
                 a(href='/') Tickets
+              li
+                a(href=rfpUrl) Submit a talk proposal
           .col-md-4
             h3.mb-4 Contact
             p

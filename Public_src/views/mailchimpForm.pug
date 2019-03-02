@@ -1,0 +1,13 @@
+
+- var formPostUrl = "https://swiftconf.us20.list-manage.com/subscribe/post?u=e1881a1d2f2758bcf9d253219&amp;id=6747d0e9c4";
+- var spamCatcherInputName = "b_e1881a1d2f2758bcf9d253219_6747d0e9c4";
+link(href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css",rel="stylesheet",type="text/css")
+div#mc_embed_signup
+  form#mc-embedded-subscribe-form.validate(action=formPostUrl, method="post", name="mc-embedded-subscribe-form", target="_blank", novalidate)
+    #mc_embed_signup_scroll
+      input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='email address', required='')
+      // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+      div(style='position: absolute; left: -5000px;', aria-hidden='true')
+        input(type='text', name=spamCatcherInputName, tabindex='-1', value='')
+      .clear
+        input#mc-embedded-subscribe.button(type='submit', value='Notify Me', name='notify')
