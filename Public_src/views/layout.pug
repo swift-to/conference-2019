@@ -43,9 +43,9 @@ html(lang="en")
         .container
           a.navbar-brand(href='index.html')=title
           a.navbar-brand.small(href='index.html')=title
-          button.navbar-toggler(type='button', v-on:click="toggle()")
+          button.navbar-toggler(type='button')
             span.navbar-toggler-icon
-          div(v-bind:class="{ collapse: !isExpanded }").navbar-collapse.navbar-light
+          div.navbar-collapse.navbar-light.collapse
             ul.navbar-nav.ml-auto.pl-lg-5.pl-0
               li.nav-item
                 a.nav-link(href='#speakers') Speakers 
@@ -81,3 +81,5 @@ html(lang="en")
                 span=email
             p
               span.p-2=companyName
+
+    script(src='js/main.js')
