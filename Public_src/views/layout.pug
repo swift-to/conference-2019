@@ -5,7 +5,7 @@
 
 - var keywords = ["conference", "swift", "ios", "macos", "watchos", "linux", "server-side", "apple"].join(",")
 - var expectation1 = {title: "Great Talks", description: "A day filled with talks about all things Swift programming. Beyond just iOS and Mac development, this conference is about celebrating the language and its many uses."};
-- var expectation2 = {title: "Networking", description: "Meet other passionate developers progamming with Swift in your community. An after-conference event will be organized at a nearby restaurant."};
+- var expectation2 = {title: "Networking", description: "Meet other passionate developers progamming with Swift in your community. An after-conference event will be organized to celebrate and network."};
 - var expectation3 = {title: "Knowledge you can share", description: "All content at Swift TO will be recorded and distributed online so anything you learn can easily be shared with your broader team after the event."};
 - var expectation4 = {title: "Quality", description: "We're here to celebrate the great passion and talent for Swift development in this city. SwiftTO wants to showcase great work and ideas from in and around our community."};
 - var expectation5 = {title: "Convenience", description: "Travelling for Swift/Apple conferences may not fit all schedules. SwiftTO is a jam-packed day of content close to home."};
@@ -60,26 +60,26 @@ html(lang="en")
     footer.site-footer
       .container
         .row.mb-5
-          .col-md-4
+          .col-md-4.mb-2
             h3.mb-4 About
             p.mb-4
               | #{description}
-          .col-md-4
+          .col-md-4.mb-2
             h3.mb-4 Links
             ul.list-unstyled
               //- li
                 a(href='/') Tickets
               li
                 a(href=rfpUrl) Submit a talk proposal
-          .col-md-4
+          .col-md-4.mb-2
             h3.mb-4 Contact
             p
-              a.p-2(target='_blank', href='https://twitter.com/' + twitter)
+              a(target='_blank', href='https://twitter.com/' + twitter)
                 span.fa.fa-twitter
             p
-              a.p-2(target='_blank', href='mailto:' + email)
+              a(target='_blank', href='mailto:' + email)
                 span=email
             p
-              span.p-2=companyName
+              span Brought to you by #{companyName}
 
     script(src='js/main.js')

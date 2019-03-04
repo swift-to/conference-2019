@@ -10,10 +10,10 @@ block content
               h1.mb-3
                 img.swift-logo(src="./images/swift-icon-white.png")
                 span=title
-              div.info
-                span.mb-5.conference-description=description
-                span.mb-5.conference-date=date
-                span Sign-up to be notified as soon as tickets are on sale
+              div.header-info
+                span.mb-4.conference-description=description
+                span.mb-4.conference-date=date
+                span.conference-sign-up Sign-up to be notified as soon as tickets are on sale
                 include mailchimpForm.pug
 
   section.mb-5#summary
@@ -32,7 +32,7 @@ block content
       div.row.mb-3
           div.col-lg-12.mb-2
             p We are now seeking speakers for the conference. All talks will be recorded and distributed online.
-            p Talks can be 5, 10, 15 or 30 minutes in length. Depending on the proposals received we will organize the schedule accordingly.
+            p Talks can be 10, 15 or 30 minutes in length. Depending on the proposals received we will organize the schedule accordingly.
             p Speakers will be announced over time to allow for later submissions and help us to ensure a packed schedule of great content.
             p 
               a(href=rfpUrl, target="_blank") Send us your talk proposals here
@@ -41,7 +41,7 @@ block content
 
   section.mb-5#schedule
     div.container
-      h3.text.mt-5.mb-4 Schedule
+      h3.text.mt-5.mb-4 Tentative Schedule
       table.schedule
         tr.headings
           th Time
@@ -73,11 +73,5 @@ block content
       div.col-lg-12.mb-2
         h4 &lt;Your brand here&gt;
         p We are currently seeking sponsors. Sponsors help make SwiftTO an affordable conference available to everyone.
-        p As a sponsor your brand will:
-        ul
-          li Be displayed on our website and all marketing communications, including at the beginning and end of all recorded talks. 
-          li Have the opportunity to distribute branded swag at the event
-          li 
-            strong Gold Sponsors
-            |  will have the opportunity to make short remarks during the conference
-        p Other details can be discussed via email.
+        p Details of our sponsorship tiers can be discussed and negotiated&nbsp;
+          a(href="mailto:" + email) via email
