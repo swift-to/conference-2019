@@ -12,7 +12,8 @@
 - var expectation6 = {title: "Affordability", description: "Conference ticket prices don't always fit our budgets. SwiftTO is a price-conscious conference and is welcome to all experience levels."};
 - var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5, expectation6];
 
-- var twitter = "nscoderto"
+- var twitter1 = "SwiftConfTO"
+- var twitter2 = "NSCoderTO"
 - var email = "hello@swiftconf.to"
 - var companyName = "NSCoderTO in partnership with Pyrus.io Inc."
 
@@ -70,12 +71,19 @@ html(lang="en")
               //- li
                 a(href='/') Tickets
               li
-                a(href=rfpUrl) Submit a talk proposal
+                a(target='_blank', href=rfpUrl) Submit a talk proposal
           .col-md-4.mb-2
             h3.mb-4 Contact
             p
-              a(target='_blank', href='https://twitter.com/' + twitter)
+              a(target='_blank', href='https://twitter.com/' + twitter1)
                 span.fa.fa-twitter
+                | &nbsp;
+                span=twitter1
+            p
+              a(target='_blank', href='https://twitter.com/' + twitter2)
+                span.fa.fa-twitter
+                | &nbsp;
+                span=twitter2
             p
               a(target='_blank', href='mailto:' + email)
                 span=email
