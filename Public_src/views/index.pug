@@ -12,7 +12,8 @@ block content
                 span=title
               div.header-info
                 span.mb-4.conference-description=description
-                span.mb-4.conference-date=date
+                span.mb-3.conference-date=date
+                a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
                 span.conference-sign-up Sign-up to be notified as soon as tickets are on sale
                 include mailchimpForm.pug
 
