@@ -167,6 +167,22 @@ header {
 	.site-hero-inner {
 		height: 500px;
 	}
+	&.small {
+		.site-hero-inner {
+			height: 300px;
+		}
+		div.header-info {
+			span, a {
+				font-size: 1rem;
+				&.conference-date {
+					font-size: 1.5rem;
+				}
+				&.conference-venue {
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
 }
 
 div.header-info {
@@ -186,11 +202,13 @@ div.header-info {
 		&.conference-venue {
 			font-size: 1.75rem;
 		}
-		&.conference-sign-up {
-			font-size: 1.2rem;
-			line-height: 150%;
-		}
 	}
+}
+
+h3.conference-sign-up {
+	text-align: center;
+	font-size: 2rem;
+	line-height: 150%;
 }
 
 .site-section {
@@ -199,13 +217,14 @@ div.header-info {
 
 #mc_embed_signup {
 	input {
-		margin: 0.3rem auto !important;
+		margin: 0.5rem auto !important;
 	}
 }
 
 #mc-embedded-subscribe {
 	background-color: #E6022F !important;
 	font-size: 1.1rem !important;
+	height: 40px !important;
 }
 
 .img-bg {
