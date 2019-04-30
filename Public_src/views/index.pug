@@ -15,11 +15,6 @@ block content
                 span.mb-3.conference-date=date
                 a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
 
-  section.mb-5#sign-up
-    div.container
-      h3.conference-sign-up.mt-5.mb-2 Sign-up to be notified as soon as tickets are on sale
-      include mailchimpForm.pug
-
   section.mb-5#summary
     div.container
       h3.text.mt-5.mb-5 What to Expect
@@ -32,7 +27,53 @@ block content
 
   section.mb-5#speakers
     div.container
-      h3.text.mt-5.mb-4 Now Calling for Speakers
+      h3.text.mt-5.mb-4 Speakers
+      div.row.profiles-section
+        div.col-md-3.mb-2
+          img.mb-3(src="./images/paul-hudson.jpg")
+          h5 Paul Hudson
+          a(target='_blank', href='https://twitter.com/twostraws')
+            span.fa.fa-twitter
+            | &nbsp;
+            span twostraws
+        div.col-md-3.mb-2
+          img.mb-3(src="./images/chris-ching.jpg")
+          h5 Chris Ching
+          a(target='_blank', href='https://twitter.com/codewithchris')
+            span.fa.fa-twitter
+            | &nbsp;
+            span CodeWithChris
+        div.col-md-3.mb-2
+          img.mb-3(src="./images/mystery-profile.jpg")
+          h5 More Speakers To Be Announced
+
+  hr
+
+  section.mb-5#tickets
+    div.container
+      h3.text.mt-5.mb-4 Tickets
+    div.container#eventbrite-iframe
+      script(src='https://www.eventbrite.ca/static/widgets/eb_widgets.js')
+      script(type='text/javascript').
+        window.EBWidgets.createWidget({
+          widgetType: 'checkout',
+          eventId: '60910628329',
+          iframeContainerId: 'eventbrite-iframe',
+          iframeContainerHeight: 675,
+        });
+
+  hr
+
+  section.mb-5#sign-up
+    div.container
+      h3.conference-sign-up.mt-5.mb-2 Sign-up for the latest updates
+      include mailchimpForm.pug
+
+  hr
+
+  section.mb-5#talk-proposals
+    div.container
+      h3.text.mt-5.mb-4 Submit your talk proposals
       div.row.mb-3
           div.col-lg-12.mb-2
             p We are now seeking speakers for the conference. All talks will be recorded and distributed online.
@@ -75,10 +116,7 @@ block content
     div.container
       h3.text.mt-5.mb-4 Sponsors
       div.col-lg-12.mb-2
-        h4 &lt;Your brand here&gt;
-        p We are currently seeking sponsors. Sponsors help make SwiftTO an affordable conference available to everyone.
-        p Details of our sponsorship tiers can be discussed and negotiated&nbsp;
-          a(href="mailto:" + email) via email
+        img.telus(src="./images/Logo_TELUS.svg")
 
   hr
 
@@ -89,22 +127,22 @@ block content
         p Swift TO is brought to you by the organizers of&nbsp;
           a(href="https://www.meetup.com/NSCoderTO/") NSCoderTO
           |, a macOS and iOS user group based in Toronto
-      div.row
-        div.col-sm-4.mb-2
+      div.row.profiles-section
+        div.col-md-3.mb-2
           img.mb-3(src="./images/organizer-kyle.jpg")
           h5 Kyle Newsome
           a(target='_blank', href='https://twitter.com/kylnew')
             span.fa.fa-twitter
             | &nbsp;
             span kylnew
-        div.col-sm-4.mb-2
+        div.col-md-3.mb-2
           img.mb-3(src="./images/organizer-brendan.jpg")
           h5 Brendan Miller
           a(target='_blank', href='https://twitter.com/brendancmiller')
             span.fa.fa-twitter
             | &nbsp;
             span brendancmiller
-        div.col-sm-4.mb-2
+        div.col-md-3.mb-2
           img.mb-3(src="./images/organizer-bill.jpg")
           h5 Bill Parousis
           a(target='_blank', href='https://twitter.com/bparousis')

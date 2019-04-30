@@ -17,7 +17,7 @@
 - var twitter1 = "SwiftConfTO"
 - var twitter2 = "NSCoderTO"
 - var email = "hello@swiftconf.to"
-- var companyName = "NSCoderTO in partnership with Pyrus.io Inc."
+- var companyName = "NSCoderTO and Swift TO Inc., a non-profit corporation"
 
 doctype html
 html(lang="en")
@@ -64,8 +64,8 @@ html(lang="en")
                 a.nav-link(href='#schedule') Schedule 
               li.nav-item
                 a.nav-link(href='#code-of-conduct') Code of Conduct
-              //- li.nav-item
-                a.nav-link(href='/') Tickets
+              li.nav-item
+                a.nav-link(href='#tickets') Tickets
 
     div#app
       block content
@@ -82,6 +82,8 @@ html(lang="en")
             ul.list-unstyled
               li
                 a(href='/') Home
+              li
+                a(href='/#tickets') Tickets
               li
                 a(href='/diversity-and-inclusion.html') Diversity &amp; Inclusion
               li
@@ -102,6 +104,6 @@ html(lang="en")
               a(target='_blank', href='mailto:' + email)
                 span=email
             p
-              span Brought to you by #{companyName}
+              span Organized by #{companyName}
 
     script(src='js/main.js')
