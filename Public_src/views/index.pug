@@ -15,11 +15,6 @@ block content
                 span.mb-3.conference-date=date
                 a.mb-4.conference-venue(href=venueUrl, target="_blank") @ #{venueName}
 
-  section.mb-5#sign-up
-    div.container
-      h3.conference-sign-up.mt-5.mb-2 Sign-up for the latest updates
-      include mailchimpForm.pug
-
   section.mb-5#summary
     div.container
       h3.text.mt-5.mb-5 What to Expect
@@ -52,6 +47,31 @@ block content
           img.mb-3(src="./images/mystery-profile.jpg")
           h5 More Speakers To Be Announced
 
+  hr
+
+  section.mb-5#tickets
+    div.container
+      h3.text.mt-5.mb-4 Tickets
+    div.container#eventbrite-iframe
+      script(src='https://www.eventbrite.ca/static/widgets/eb_widgets.js')
+      script(type='text/javascript').
+        window.EBWidgets.createWidget({
+          widgetType: 'checkout',
+          eventId: '60910628329',
+          iframeContainerId: 'eventbrite-iframe',
+          iframeContainerHeight: 675,
+        });
+
+  hr
+
+  section.mb-5#sign-up
+    div.container
+      h3.conference-sign-up.mt-5.mb-2 Sign-up for the latest updates
+      include mailchimpForm.pug
+
+  hr
+
+  section.mb-5#talk-proposals
     div.container
       h3.text.mt-5.mb-4 Submit your talk proposals
       div.row.mb-3
@@ -89,21 +109,6 @@ block content
         tr
           td.time 5:00 - 9:00
           td Post-conference celebration and networking event
-
-  hr
-
-  section.mb-5#tickets
-    div.container
-      h3.text.mt-5.mb-4 Tickets
-    div.container#eventbrite-iframe
-      script(src='https://www.eventbrite.ca/static/widgets/eb_widgets.js')
-      script(type='text/javascript').
-        window.EBWidgets.createWidget({
-          widgetType: 'checkout',
-          eventId: '60910628329',
-          iframeContainerId: 'eventbrite-iframe',
-          iframeContainerHeight: 675,
-        });
 
   hr
 
