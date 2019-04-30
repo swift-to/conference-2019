@@ -218,6 +218,8 @@ h3.conference-sign-up {
 #mc_embed_signup {
 	input {
 		margin: 0.5rem auto !important;
+		width: 50%;
+		display: block;
 	}
 }
 
@@ -225,6 +227,8 @@ h3.conference-sign-up {
 	background-color: #E6022F !important;
 	font-size: 1.1rem !important;
 	height: 40px !important;
+	color: white;
+	border-width: 0;
 }
 
 .profiles-section {
@@ -238,8 +242,18 @@ h3.conference-sign-up {
 }
 
 #eventbrite-iframe {
-	height: 675px;
+	height: 500px;
 	margin: auto;
+}
+
+input#show-buy-modal {
+	color: white;
+	background-color: #E6022F;
+	border-radius: 4px;
+	border-width: 0;
+	font-size: 1.1rem;
+	width: 35%;
+	height: 40px;
 }
 
 img.telus {
