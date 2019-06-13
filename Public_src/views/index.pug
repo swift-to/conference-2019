@@ -29,28 +29,15 @@ block content
     div.container
       h3.text.mt-5.mb-4 Speakers
       div.row.profiles-section
-        div.col-md-3.mb-2
-          img.mb-3(src="./images/paul-hudson.jpg")
-          h5 Paul Hudson
-          a(target='_blank', href='https://twitter.com/twostraws')
-            span.fa.fa-twitter
-            | &nbsp;
-            span twostraws
-        div.col-md-3.mb-2
-          img.mb-3(src="./images/chris-ching.jpg")
-          h5 Chris Ching
-          a(target='_blank', href='https://twitter.com/codewithchris')
-            span.fa.fa-twitter
-            | &nbsp;
-            span CodeWithChris
-        div.col-md-3.mb-2
-          img.mb-3(src="./images/abbey-jackson.jpg")
-          h5 Abbey Jackson
-          a(target='_blank', href='https://twitter.com/earthabbey')
-            span.fa.fa-twitter
-            | &nbsp;
-            span earthabbey
-        div.col-md-3.mb-2
+        each speaker in speakers
+            div.col-md-3.mb-3
+              img.mb-3(src="./images/" + speaker.slug + ".jpg")
+              h5=speaker.name
+              a(target="_blank", href="https://twitter.com/" + speaker.twitter)
+                span.fa.fa-twitter
+                | &nbsp;
+                span=speaker.twitter
+        div.col-md-3.mb-3
           img.mb-3(src="./images/mystery-profile.jpg")
           h5 More Speakers To Be Announced
 
@@ -130,9 +117,13 @@ block content
 
   section.mb-5#sponsors
     div.container
-      h3.text.mt-5.mb-4 Sponsors
-      div.col-lg-12.mb-2
-        img.telus(src="./images/Logo_TELUS.svg")
+      h3.text.mt-5.mb-5 Sponsors
+      div.col-lg-12.mb-5.silver
+        a(href="https://www.telus.com", target="blank")
+          img.sponsor(src="./images/Logo_TELUS.svg")
+      div.col-lg-12.mb-2.bronze
+        a(href="https://www.oanda.com", target="blank")
+          img.sponsor(src="./images/Logo_OANDA.jpg")
 
   hr
 

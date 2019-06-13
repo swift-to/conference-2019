@@ -6,6 +6,13 @@
 - var rfpUrl = "https://www.papercall.io/swift-to" 
 
 - var keywords = ["conference", "swift", "ios", "macos", "watchos", "linux", "server-side", "apple"].join(",")
+
+- var twitter1 = "SwiftConfTO"
+- var twitter2 = "NSCoderTO"
+- var email = "hello@swiftconf.to"
+- var companyName = "NSCoderTO and Swift TO Inc., a non-profit corporation"
+
+// Expectations
 - var expectation1 = {title: "Great Talks", description: "A day filled with talks about all things Swift programming. Beyond just iOS and Mac development, this conference is about celebrating the language and its many uses."};
 - var expectation2 = {title: "Networking", description: "Meet other passionate developers programming with Swift in your community. An after-conference event will be organized to celebrate and network."};
 - var expectation3 = {title: "Knowledge you can share", description: "All content at Swift TO will be recorded and distributed online so anything you learn can easily be shared with your broader team after the event."};
@@ -13,11 +20,13 @@
 - var expectation5 = {title: "Convenience", description: "Travelling for conferences may not fit all schedules. SwiftTO is a jam-packed day of content close to home."};
 - var expectation6 = {title: "Affordability", description: "Conference ticket prices don't always fit our budgets. SwiftTO is a price-conscious conference and is welcome to all experience levels."};
 - var expectations = [expectation1, expectation2, expectation3, expectation4, expectation5, expectation6];
-
-- var twitter1 = "SwiftConfTO"
-- var twitter2 = "NSCoderTO"
-- var email = "hello@swiftconf.to"
-- var companyName = "NSCoderTO and Swift TO Inc., a non-profit corporation"
+// Speakers
+- var speaker1 = {name: "Paul Hudson", slug: "paul-hudson", twitter: "twostraws"};
+- var speaker2 = {name: "Chris Ching", slug: "chris-ching", twitter: "CodeWithChris"};
+- var speaker3 = {name: "Abbey Jackson", slug: "abbey-jackson", twitter: "earthabbey"};
+- var speaker4 = {name: "Tim Mitra", slug: "tim-mitra", twitter: "timmitra"};
+- var speaker5 = {name: "Veronica Ray", slug: "veronica-ray", twitter: "nerdonica"};
+- var speakers = [speaker1, speaker2, speaker3, speaker4, speaker5];
 
 doctype html
 html(lang="en")
@@ -59,11 +68,13 @@ html(lang="en")
           div.navbar-collapse.navbar-light.collapse
             ul.navbar-nav.ml-auto.pl-lg-5.pl-0
               li.nav-item
-                a.nav-link(href='#tickets') Tickets
+                a.nav-link(href='/#tickets') Tickets
               li.nav-item
-                a.nav-link(href='#speakers') Speakers 
+                a.nav-link(href='/speakers.html') Speakers 
               li.nav-item
-                a.nav-link(href='#schedule') Schedule 
+                a.nav-link(href='/#schedule') Schedule 
+              li.nav-item
+                a.nav-link(href='/diversity-and-inclusion.html') Diversity &amp; Inclusion
 
     div#app
       block content
@@ -82,6 +93,8 @@ html(lang="en")
                 a(href='/') Home
               li
                 a(href='/#tickets') Tickets
+              li
+                a(href='/speakers.html') Speakers
               li
                 a(href='/diversity-and-inclusion.html') Diversity &amp; Inclusion
               li

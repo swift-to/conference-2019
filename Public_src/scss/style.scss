@@ -239,6 +239,9 @@ h3.conference-sign-up {
 		border-radius: 80px;
 		border: 4px solid #E6022F;
 	}
+	.details {
+		text-align: left;
+	}
 }
 
 #eventbrite-iframe {
@@ -265,8 +268,16 @@ img.map {
 	max-width: 300px;
 }
 
-img.telus {
-	width: 300px;
+.silver {
+	img.sponsor {
+		width: 300px;
+	}
+}
+
+.bronze {
+	img.sponsor {
+		width: 270px;
+	}
 }
 
 .img-bg {
