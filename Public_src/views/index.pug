@@ -33,10 +33,12 @@ block content
             div.col-md-3.mb-3
               img.mb-3(src="./images/" + speaker.slug + ".jpg")
               h5=speaker.name
-              a(target="_blank", href="https://twitter.com/" + speaker.twitter)
-                span.fa.fa-twitter
-                | &nbsp;
-                span=speaker.twitter
+              - if (typeof(speaker.twitter) !== 'undefined'){
+                a(target="_blank", href="https://twitter.com/" + speaker.twitter)
+                  span.fa.fa-twitter
+                  | &nbsp;
+                  span=speaker.twitter
+              - }
 
   hr
 
@@ -118,6 +120,8 @@ block content
       div.col-lg-12.mb-5.silver
         a(href="https://www.telus.com", target="blank")
           img.sponsor(src="./images/Logo_TELUS.svg")
+        a(href="https://www.scotiabank.com", target="blank")
+          img.sponsor(src="./images/logo-scotia.svg")
       h4.text.mt-5.mb-5 Bronze Sponsors
       div.col-lg-12.mb-2.bronze
         a(href="https://www.oanda.com", target="blank")
@@ -126,6 +130,8 @@ block content
           img.sponsor(src="./images/logo-touch-bistro.png")
         a(href="https://www.bitrise.io", target="blank")
           img.sponsor(src="./images/logo-bitrise.svg")
+        a(href="https://www.marketcircle.com", target="blank")
+          img.sponsor(src="./images/logo-marketcircle.svg")
 
   hr
 
