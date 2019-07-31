@@ -23,10 +23,12 @@ block content
             img.mb-3(src="./images/" + speaker.slug + ".jpg")
           .col-md-7.mb-5.details
             h5=speaker.name
-            a(target="_blank", href="https://twitter.com/" + speaker.twitter)
-              span.fa.fa-twitter
-              | &nbsp;
-              span=speaker.twitter
+            - if (typeof(speaker.twitter) !== 'undefined'){
+              a(target="_blank", href="https://twitter.com/" + speaker.twitter)
+                span.fa.fa-twitter
+                | &nbsp;
+                span=speaker.twitter
+            - }
             p
               case speaker.slug
                 when 'veronica-ray'
@@ -45,4 +47,10 @@ block content
                   include speakers/leo-dion.txt
                 when 'frank-courville'
                   include speakers/frank-courville.txt
+                when 'lyle-resnick'
+                  include speakers/lyle-resnick.txt
+                when 'charles-joseph'
+                  include speakers/charles-joseph.txt
+                when 'rohan-trivedi'
+                  include speakers/rohan-trivedi.txt
   hr
